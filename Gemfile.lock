@@ -76,6 +76,8 @@ GEM
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
+    devise-russian (2.0.1.1)
+      devise
     diff-lcs (1.2.4)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -296,6 +298,7 @@ DEPENDENCIES
   capistrano_colors (= 0.5.5)
   coffee-rails (~> 4.0.0)
   devise
+  devise-russian
   devise_invitable!
   execjs
   factory_girl_rails
