@@ -2,6 +2,11 @@
 class User < ActiveRecord::Base
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  def name_or_dummy
+    name || "%username%"
+  end
+
 end
 # == Schema Information
 #

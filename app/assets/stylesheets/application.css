@@ -19,3 +19,8 @@ input.numeric, input.string {
     min-height: 30px;
     min-width: 220px;
 }
+
+.field_with_errors .error {
+    margin-left: 10px;
+    color: #CC0000;
+}

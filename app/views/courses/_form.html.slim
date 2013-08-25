@@ -1,7 +1,7 @@
 = simple_form_for @course, html: { class: 'form-horizontal span8' } do |f|
 
     = f.input :name
-    = f.input :category_id, as: :select, collection: @course_categories
+    = f.input :category_id, as: :select, collection: @course_categories, prompt: "Выберите категорию"
     = f.input :price
 
     div class="form-actions"
