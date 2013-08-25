@@ -32,8 +32,6 @@ group :development do
 
   gem 'execjs'
   gem 'therubyracer'
-  gem 'progress_bar', '0.4.0'
-  gem 'foreman', '0.60.2'
 
   gem 'better_errors'
   gem 'binding_of_caller'
