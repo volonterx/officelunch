@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateAchievements < ActiveRecord::Migration
   def change
     create_table :achievements do |t|

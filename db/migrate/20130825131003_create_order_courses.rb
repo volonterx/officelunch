@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateOrderCourses < ActiveRecord::Migration
   def change
     create_table :order_courses do |t|
