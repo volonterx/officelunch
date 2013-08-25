@@ -10,3 +10,7 @@ ru:
     labels:
       course_category:
         name: "Название"
+      course:
+        name: "Название"
+        category_id: "Категория"
+        price: "Стоимость"

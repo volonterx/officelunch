@@ -14,3 +14,8 @@
 
 
 body{padding-top: 30px}
+
+input.numeric, input.string {
+    min-height: 30px;
+    min-width: 220px;
+}

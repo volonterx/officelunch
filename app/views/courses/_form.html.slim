@@ -1,0 +1,25 @@
+= simple_form_for @course, html: { class: 'form-horizontal span' } do |f|
+
+    = f.input :name
+    = f.input :category_id, as: :select, collection: @course_categories
+    = f.input :price
+
+    div class="form-actions"
+      = f.submit 'Сохранить', class: 'btn btn-primary'
+      | &nbsp;&nbsp;
+      = link_to 'Отменить', courses_path, class: 'btn'
+
+small
+  p Подсказка:
+  p
+    |Салат - 8
+    br
+    |Первое - 11
+    br
+    |Первое навороченное - 12
+    br
+    |Второе - 9
+    br
+    |Гарнир - 4
+    br
+    |Второе + гарнир - 13

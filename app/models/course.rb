@@ -1,6 +1,9 @@
 # -*- encoding : utf-8 -*-
 class Course < ActiveRecord::Base
   belongs_to :category, class_name: "CourseCategory"
+
+  validates :name, :category_id, :price, presence: true
+
 end
 # == Schema Information
 #
