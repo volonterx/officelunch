@@ -9,6 +9,12 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
+gem 'slim'
+gem 'twitter-bootstrap-rails'
+gem 'simple_form'
+
+
+
 group :development do
   gem 'therubyracer'
 end
