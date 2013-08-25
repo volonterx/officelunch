@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateCoursesMenusMembershipTable < ActiveRecord::Migration
   def change
     create_table :courses_menus do |t|
