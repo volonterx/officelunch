@@ -2,15 +2,16 @@ table class='table table-stripped table-condensed'
   - unless controller_name == "dashboard"
     thead
       tr
-        th Название
         th Категория
+        th Название
         th Цена
         th
   tbody
     - @courses.each do |c|
       tr
+        td
+          i = c.category.name
         td = c.name
-        td = c.category.name
         td = c.price
         td
           - if controller_name == "courses"
