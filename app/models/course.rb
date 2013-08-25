@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 class Course < ActiveRecord::Base
   belongs_to :category, class_name: "CourseCategory"
+  has_and_belongs_to_many  :menus
 
   validates :name, :category_id, :price, presence: true
 

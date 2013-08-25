@@ -1,5 +1,8 @@
 # -*- encoding : utf-8 -*-
 class Menu < ActiveRecord::Base
+  has_and_belongs_to_many  :courses
+
+  validate :date_init, presence: true
 end
 # == Schema Information
 #
