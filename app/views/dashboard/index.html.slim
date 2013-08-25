@@ -1,5 +1,12 @@
 .span6
   p
     h3 #{'Сегодня ' + date_with_weekday(@date) }
+  p
+    - if @today_menu
+      h4 На обед:
+      = render partial: "courses/courses"
+    - else
+      = link_to "Создать меню на сегодня", new_menu_path, class: "btn"
+
 .span5
   = image_tag "/assets/bonjour.png"
