@@ -5,7 +5,7 @@ class Course < ActiveRecord::Base
 
   validates :name, :category_id, :price, presence: true
 
-  before :destroy { menus.clear }
+  before_destroy { menus.clear }
 
 end
 # == Schema Information

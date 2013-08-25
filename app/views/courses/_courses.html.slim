@@ -1,0 +1,18 @@
+table class='table table-stripped table-condensed'
+  thead
+    tr
+      th Название
+      th Категория
+      th Цена
+      th
+  tbody
+    - @courses.each do |c|
+      tr
+        td = c.name
+        td = c.category.name
+        td = c.price
+        td
+          - if controller_name == "courses"
+            = link_to 'Редактировать', edit_course_path(c), class: 'btn', title: 'Редактировать'
+            | &nbsp;&nbsp;
+            = link_to 'Удалить', course_category_path(c), class: 'btn btn-danger', method: 'delete', title: 'Удалить', confirm: 'Действительно удалить?'

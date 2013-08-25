@@ -6,6 +6,7 @@ Officelunch::Application.routes.draw do
   resources :dashboard, only: :index
   resources :course_categories
   resources :courses
+  resources :menus
 
   root :to => "dashboard#index"
 

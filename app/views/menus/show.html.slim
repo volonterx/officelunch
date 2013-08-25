@@ -1,0 +1,5 @@
+h3 Меню на #{date_with_weekday(@menu.date_init)}
+
+= render partial: "courses/courses"
+
+= link_to "Редактировать", edit_menu_path(@menu), class: "btn"

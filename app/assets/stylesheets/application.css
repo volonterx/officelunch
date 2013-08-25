@@ -20,7 +20,18 @@ input.numeric, input.string {
     min-width: 220px;
 }
 
+.error {
+    color: #CC0000;
+}
+
 .field_with_errors .error {
     margin-left: 10px;
-    color: #CC0000;
+}
+
+.input.check_boxes .checkbox {
+    padding-left: 0;
+}
+
+.input.check_boxes .checkbox input {
+    margin: 5px 5px 0 0;
 }

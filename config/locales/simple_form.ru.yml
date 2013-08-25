@@ -14,3 +14,6 @@ ru:
         name: "Название"
         category_id: "Категория"
         price: "Стоимость"
+      menu:
+        date_init: "Дата"
+        courses: "Блюда"

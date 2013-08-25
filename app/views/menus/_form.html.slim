@@ -1,0 +1,11 @@
+= simple_form_for @menu, html: { class: 'form-horizontal' } do |f|
+
+    = f.input :date_init, as: :string, default: Date.today, input_html: {class: 'datepicker'}
+    br
+    = f.error :courses_errors, class: "error"
+    = f.association :courses, as: :check_boxes, required: true
+
+    div class="form-actions"
+      = f.submit 'Сохранить', class: 'btn btn-primary'
+      | &nbsp;&nbsp;
+      = link_to 'Отменить', menus_path, class: 'btn'
