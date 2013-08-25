@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 class CourseCategory < ActiveRecord::Base
   has_many :courses
+
+  validates :name, presence: true
 end
 # == Schema Information
 #

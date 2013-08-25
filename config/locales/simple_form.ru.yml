@@ -1,0 +1,12 @@
+ru:
+  simple_form:
+    "yes": 'Да'
+    "no": 'Нет'
+    required:
+      text: 'Обязательно'
+      mark: '*'
+    error_notification:
+      default_message: "Ошибка в аттрибутах"
+    labels:
+      course_category:
+        name: "Название"
