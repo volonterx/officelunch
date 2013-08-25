@@ -15,7 +15,7 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'devise_invitable', :github => 'scambra/devise_invitable'
-gem 'devise-russian'BO
+gem 'devise-russian'
 
 
 
