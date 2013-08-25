@@ -25,7 +25,6 @@ group :development do
   gem 'capistrano_colors', '0.5.5'
   gem 'rvm-capistrano', '1.3.0'
   gem 'mailcatcher'
-  gem 'sextant', '0.1.3'
 
   gem 'execjs'
   gem 'therubyracer'
