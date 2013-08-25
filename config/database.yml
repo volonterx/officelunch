@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: officelunch_development
+  pool: 5
+  username: postgres
+  password: root
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: officelunch_test
+  pool: 5
+  username: postgres
+  password: root
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: officelunch_production
+  pool: 5
+  username: postgres
+  password: root
