@@ -3,6 +3,9 @@ class Menu < ActiveRecord::Base
   has_and_belongs_to_many  :courses
 
   validate :date_init, presence: true
+
+  before :destroy { courses.clear }
+
 end
 # == Schema Information
 #
