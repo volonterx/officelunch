@@ -1,7 +1,21 @@
 .navbar.navbar-fixed-top
   .navbar-inner
     .container
-      = link_to 'OfficeLunch', root_path, class: "brand"
+
+      = link_to 'Office lunch', root_path, class: "brand"
       ul.nav
         li = link_to "Категории", course_categories_path
         li = link_to "Блюда", courses_path
+
+      ul.nav.pull-right.user-info
+        - if current_user
+          li.dropdown
+            a.dropdown-toggle[data-toggle="dropdown" href="#"]
+              ' Hello
+              b= current_user.name || "%username%"
+            ul.dropdown-menu
+              li= link_to "Edit profile", edit_user_registration_path
+              li= link_to 'Logout', destroy_user_session_path, method: "delete"
+        - else
+          li= link_to 'Log in', new_user_session_path
+
