@@ -19,3 +19,6 @@ input.numeric, input.string {
     min-height: 30px;
     min-width: 220px;
 }
+
+label.boolean, #user_remember_me {float:left; display: block}
+#user_remember_me{margin-right: 10px !important;}
