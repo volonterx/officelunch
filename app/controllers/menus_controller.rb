@@ -11,7 +11,7 @@ class MenusController < ApplicationController
   end
 
   def new
-    @menu = Menu.new()
+    @menu = Menu.new({date_init: Date.today.strftime("%d-%m-%Y")})
   end
 
   def create

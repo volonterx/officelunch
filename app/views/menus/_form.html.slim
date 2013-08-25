@@ -1,6 +1,6 @@
 = simple_form_for @menu, html: { class: 'form-horizontal' } do |f|
 
-    = f.input :date_init, as: :string, default: Date.today, input_html: {class: 'datepicker'}
+    = f.input :date_init, as: :string,  input_html: {class: 'datepicker'}
     br
     = f.error :courses_errors, class: "error"
     = f.association :courses, as: :check_boxes, required: true
