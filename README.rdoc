@@ -1,28 +1,11 @@
-== README
+Приложение для заказа блюд в офис. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Есть категории блюд (первое, второе, гарнир, салат ... )
+* Есть блюда, принадлежащщие категории блюд.
+* Каждый день создается меню содержащее в себе некоторые из доступных блюд
+* Каждый пользователь заходит и создает заказ в котором выбирает доступные в меню блюда. 
+    (можно заказать половину блюда)
+* После того как были сделаны, формируется общий счет с указанием количества блюд, которые должны привезти.
+    (Если один пользователь заказал половину блюда, но ее не заказл второй - этот пункт будет вынесен отдельно и выделен)
+    (Блюда группируются по пользователю второе и гарнир, например)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
