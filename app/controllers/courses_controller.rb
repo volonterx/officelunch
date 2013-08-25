@@ -15,7 +15,7 @@ class CoursesController < ApplicationController
     def create
       @course = Course.new(course_params)
       if @course.save
-        redirect_to courses_path, notice: "Категория успешно созадна"
+        redirect_to courses_path, notice: "Блюдо успешно добавлено"
       else
         render action: :new
       end
@@ -26,7 +26,7 @@ class CoursesController < ApplicationController
 
     def update
       if @course.update_attributes(course_params)
-        redirect_to courses_path, notice: "Категория успешно обновлена"
+        redirect_to courses_path, notice: "Блюдо успешно обновлено"
       else
         render action: :edit
       end
@@ -34,9 +34,9 @@ class CoursesController < ApplicationController
 
     def destroy
       if @course.destroy
-        notice = 'Категория успешно удалена'
+        notice = 'Блюдо успешно удалено'
       else
-        notice = 'Категория не была удалена'
+        notice = 'Блюдо не была удалено'
       end
       redirect_to courses_path, notice: notice
     end
