@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/plataformatec/simple_form.git
+  revision: 359606f222fa0972a4a14ec70140ac00f7c80839
+  specs:
+    simple_form (3.0.0.rc)
+      actionpack (>= 4.0.0, < 4.1)
+      activemodel (>= 4.0.0, < 4.1)
+
+GIT
   remote: git://github.com/scambra/devise_invitable.git
   revision: 7a7cb78f39c68ae5d565289ad1f097d6b76ab433
   specs:
@@ -226,7 +234,6 @@ GEM
       rdoc (~> 3.10)
     shoulda-matchers (1.1.0)
       activesupport (>= 3.0.0)
-    simple_form (1.4.1)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
@@ -322,7 +329,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   shoulda-matchers (= 1.1.0)
-  simple_form
+  simple_form!
   simplecov
   simplecov-rcov
   slim
