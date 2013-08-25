@@ -13,6 +13,7 @@ gem 'slim'
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'devise'
+gem 'devise_invitable', :github => 'scambra/devise_invitable'
 
 
 
