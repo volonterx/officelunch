@@ -16,5 +16,5 @@
 /tmp
 .rvmrc
 /config/database.yml
-.idea
-.idea/*
+#.idea
+#.idea/*
