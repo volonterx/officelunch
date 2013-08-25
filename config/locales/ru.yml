@@ -1,0 +1,8 @@
+ru:
+  devise:
+    emails: "E-mail"
+    sessions:
+      sign_in: "Вход"
+      remember_me: "Запомнить?"
+      password: "Пароль"
+  hello: "Привет"
