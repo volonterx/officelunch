@@ -1,0 +1,20 @@
+h2= t('front.users.header')
+
+= link_to t('front.users.send_invite'), new_user_invitation_path, class: 'btn btn-success'
+br
+br
+table class='table table-stripped table-condensed'
+  thead
+    tr
+      th= t('simple_form.labels.user.name')
+      th= t('simple_form.labels.user.email')
+      th
+  tbody
+    - collection.each do |user|
+      tr
+        td = user.name
+        td = user.email
+        td
+          = link_to t('edit'), edit_user_path(user), class: 'btn', title: t('edit')
+          | &nbsp;&nbsp;
+          = link_to t('delete'), user_path(user), class: 'btn btn-danger', method: 'delete', title: t('delete'), confirm: t('realy_destroy?'), "data-no-turbolink" => true

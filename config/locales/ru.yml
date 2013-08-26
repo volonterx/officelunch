@@ -1,5 +1,9 @@
 ru:
   save: "Сохранить"
+  edit: "Изменить"
+  cancel: "Отменить"
+  delete: "Удалить"
+  realy_destroy?: "Дуйствительно удалить?"
   devise:
     emails: "E-mail"
     sessions:
@@ -24,4 +28,9 @@ ru:
       user_block:
         edit_profile: "Редактировать данные"
         exit: "Выход"
+    users:
+      header: "Пользователи"
+      send_invite: "Отправить Инвайт"
+      edit: "Редактировать данные"
+      success_update: "Данные успешно обновлены"
   hello: "Привет"

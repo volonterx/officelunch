@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'inherited_resources'
+
 
 gem 'russian'
 gem 'slim'
