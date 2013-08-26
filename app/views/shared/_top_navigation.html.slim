@@ -3,10 +3,11 @@
     .container
 
       = link_to 'Office lunch', root_path, class: "brand"
-      ul.nav
-        li = link_to "Категории", course_categories_path
-        li = link_to "Блюда", courses_path
-        li = link_to "Меню", menus_path
+      - if current_user
+        ul.nav
+          li = link_to "Категории", course_categories_path
+          li = link_to "Блюда", courses_path
+          li = link_to "Меню", menus_path
 
       ul.nav.pull-right.user-info
         - if current_user
@@ -15,8 +16,8 @@
               ' Bonjour,
               b = current_user.name_or_dummy
             ul.dropdown-menu
-              li= link_to "Edit profile", edit_user_registration_path
-              li= link_to 'Logout', destroy_user_session_path, method: "delete"
+              li= link_to t('front.header.user_block.edit_profile'), edit_user_registration_path
+              li= link_to t('front.header.user_block.exit'), destroy_user_session_path, method: "delete"
         - else
           li= link_to 'Log in', new_user_session_path
 

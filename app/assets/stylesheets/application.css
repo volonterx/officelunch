@@ -38,4 +38,8 @@ input.numeric, input.string {
 
 label.boolean, #user_remember_me {float:left; display: block}
 #user_remember_me{margin-right: 10px !important;}
+form.new_user input.password, form.edit_user input.password{
+  padding: 14px 6px;
+  width: 220px;
+}
 

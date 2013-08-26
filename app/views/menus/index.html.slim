@@ -17,4 +17,4 @@ table class='table table-stripped table-condensed'
           | &nbsp;&nbsp;
           = link_to 'Редактировать', edit_menu_path(m), class: 'btn', title: 'Редактировать'
           | &nbsp;&nbsp;
-          = link_to 'Удалить', menu_path(m), class: 'btn btn-danger', method: 'delete', title: 'Удалить', confirm: 'Действительно удалить?'
+          = link_to 'Удалить', menu_path(m), class: 'btn btn-danger', method: 'delete', title: 'Удалить', confirm: 'Действительно удалить?', "data-no-turbolink" => true

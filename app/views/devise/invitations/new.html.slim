@@ -1,6 +1,6 @@
-h2= t "devise.invitations.new.header"
+h2= t('devise.invitations.new.header')
 = simple_form_for resource, :as => @user, :url => invitation_path(@user), :html => {:method => :post} do |f|
   = devise_error_messages!
   - @user.class.invite_key_fields.each do |field|
     = f.input field
-    = f.submit t("devise.invitations.new.submit_button")
+    = f.submit t("devise.invitations.new.submit_button"), class: "btn btn-success"

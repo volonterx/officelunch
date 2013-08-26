@@ -17,3 +17,7 @@ ru:
       menu:
         date_init: "Дата"
         courses: "Блюда"
+      user:
+        name: Имя
+        email: E-mail
+        password: Пароль

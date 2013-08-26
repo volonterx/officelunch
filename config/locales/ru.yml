@@ -1,8 +1,27 @@
 ru:
+  save: "Сохранить"
   devise:
     emails: "E-mail"
     sessions:
       sign_in: "Вход"
       remember_me: "Запомнить?"
       password: "Пароль"
+    registrations:
+      edit_profile: "Изменить профиль"
+      password_confirmation: "Введить пароль еще раз"
+      current_password: "Текущий пароль"
+      hint_for_password: "Оставьте пустым если не хотите изменять"
+    invitations:
+      new:
+        header: "Новое приглашение"
+        submit_button: "Отправить"
+      edit:
+        header: "Изменение пароля"
+      user:
+        updated: "Данные сохранены"
+  front:
+    header:
+      user_block:
+        edit_profile: "Редактировать данные"
+        exit: "Выход"
   hello: "Привет"
