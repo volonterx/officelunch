@@ -7,14 +7,16 @@ table class='table table-stripped table-condensed'
   thead
     tr
       th Дата
+      th = t('front.menus.sent?')
+      th
       th
   tbody
     - @menus.each do |m|
       tr
-        td = m.date_init
+        td = link_to m.date_init, menu_path(m), title: "Просмотреть"
+        td = m.sent? ? '✓' : ''
+        td = link_to t('front.menus.send_emails'), send_email_about_dinner_menu_path(m), class: "btn btn-primary", title: t('front.menus.send_emails_title'), confirm: t('front.menus.realy_send?'), method: "post"
         td
-          = link_to 'Просмотреть', menu_path(m), class: 'btn', title: "Просмотреть"
-          | &nbsp;&nbsp;
           = link_to 'Редактировать', edit_menu_path(m), class: 'btn', title: 'Редактировать'
           | &nbsp;&nbsp;
           = link_to 'Удалить', menu_path(m), class: 'btn btn-danger', method: 'delete', title: 'Удалить', confirm: 'Действительно удалить?', "data-no-turbolink" => true

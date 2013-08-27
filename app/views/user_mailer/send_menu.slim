@@ -1,0 +1,19 @@
+h2= t("mailer.send_menu.hello") + @user.name_or_dummy
+= t("mailer.send_menu.today_for_lunch")
+br
+table[style="border: 2px solid black; border-collapse:collapse;"]
+  thead
+    tr
+      th[style="border: 1px solid black"]= t('mailer.send_menu.category')
+      th[style="border: 1px solid black"]= t('mailer.send_menu.name')
+      th[style="border: 1px solid black"]= t('mailer.send_menu.price')
+  tbody
+    - @mail_attr[:courses].each do |course|
+      tr
+        td[style="border: 1px solid black"]= course[:category]
+        td[style="border: 1px solid black"]= course[:name]
+        td[style="border: 1px solid black"]= course[:price]
+
+br
+=' t('mailer.send_menu.order_by_this_link')
+= link_to t('mailer.send_menu.order'), '#', class: 'btn btn-success'

@@ -6,7 +6,9 @@ Officelunch::Application.routes.draw do
   resources :dashboard, only: :index
   resources :course_categories
   resources :courses
-  resources :menus
+  resources :menus do
+    post :send_email_about_dinner, on: :member
+  end
   resources :users, except: [:show, :new, :create]
 
   root :to => "dashboard#index"

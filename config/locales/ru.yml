@@ -23,6 +23,7 @@ ru:
         header: "Изменение пароля"
       user:
         updated: "Данные сохранены"
+        send_instructions: "Инвайт был отправлен"
   front:
     header:
       user_block:
@@ -33,4 +34,20 @@ ru:
       send_invite: "Отправить Инвайт"
       edit: "Редактировать данные"
       success_update: "Данные успешно обновлены"
+    menus:
+      send_emails: "Разослать меню"
+      send_emails_title: "Разослать письма с меню"
+      realy_send?: "Вы действительно хотите разослать всем это меню?"
+      sent?: "Разослана?"
+      digest_was_launched: "Рассылка была отправлена"
+  mailer:
+    send_menu:
+      date_init: "Рассылка меню на"
+      hello: "Добрый день, "
+      today_for_lunch: "Сегодня, на обед, предлагается:"
+      name: "Название"
+      category: "Категория"
+      price: "Стоимость"
+      order_by_this_link: "Чтобы сделать заказ перейдите на сайт:"
+      order: "Заказ"
   hello: "Привет"

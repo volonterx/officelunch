@@ -10,7 +10,8 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'inherited_resources'
-
+gem 'delayed_job'
+gem 'delayed_job_active_record'
 
 gem 'russian'
 gem 'slim'
