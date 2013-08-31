@@ -40,6 +40,17 @@ ru:
       realy_send?: "Вы действительно хотите разослать всем это меню?"
       sent?: "Разослана?"
       digest_was_launched: "Рассылка была отправлена"
+      reserved?: "Заказано?"
+    orders:
+      new_title: "Новый заказ"
+      edit_title: "Редактировать заказ"
+      create: "Создать заказ"
+      edit_order: "Редактировать заказ"
+      sum: "Сумма"
+    dashboard:
+      success_create: "Заказ успешно создан"
+      success_update: "Заказ успешно обновлен"
+      you_ordered: "Вы заказали"
   mailer:
     send_menu:
       date_init: "Рассылка меню на"

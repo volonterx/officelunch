@@ -10,6 +10,7 @@ Officelunch::Application.routes.draw do
     post :send_email_about_dinner, on: :member
   end
   resources :users, except: [:show, :new, :create]
+  resources :orders
 
   root :to => "dashboard#index"
 

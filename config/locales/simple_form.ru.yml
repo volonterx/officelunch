@@ -21,3 +21,6 @@ ru:
         name: Имя
         email: E-mail
         password: Пароль
+      order:
+        courses: "Блюда"
+        not_order: "Не буду заказывать"

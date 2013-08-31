@@ -4,7 +4,7 @@
   p
     - if @today_menu
       h4 На обед:
-      = render partial: "courses/courses"
+      = render partial: "order"
     - else
       = link_to "Создать меню на сегодня", new_menu_path, class: "btn"
 

@@ -3,9 +3,14 @@ class User < ActiveRecord::Base
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :orders
 
   def name_or_dummy
     name || "%username%"
+  end
+
+  def today_order
+    orders.where(date_order: Date.today).try(:first)
   end
 
 end

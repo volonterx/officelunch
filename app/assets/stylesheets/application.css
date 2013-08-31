@@ -43,3 +43,5 @@ form.new_user input.password, form.edit_user input.password{
   width: 220px;
 }
 
+#order_not_order{margin-left: 10px !important;}
+

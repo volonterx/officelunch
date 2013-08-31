@@ -16,6 +16,7 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require bootstrap-datepicker.js
+//= require dashboard
 //= require_self
 
 $(document).ready(function() {

@@ -5,10 +5,10 @@
       = link_to 'Office lunch', root_path, class: "brand"
       - if current_user
         ul.nav
-          li = link_to "Категории", course_categories_path
-          li = link_to "Блюда", courses_path
-          li = link_to "Меню", menus_path
-          li = link_to "Пользователи", users_path
+          li[class=(check_for_active(controller, 'course_categories'))] = link_to "Категории", course_categories_path
+          li{class=(check_for_active(controller, 'courses'))} = link_to "Блюда", courses_path
+          li{class=(check_for_active(controller, 'menus'))} = link_to "Меню", menus_path
+          li{class=(check_for_active(controller, 'users'))}= link_to "Пользователи", users_path
 
       ul.nav.pull-right.user-info
         - if current_user

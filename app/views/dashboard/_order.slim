@@ -1,0 +1,28 @@
+= simple_form_for @order, params_for_order_form(@order) do |f|
+  table class='table table-stripped table-condensed'
+    thead
+      tr
+        th
+        th
+        th
+        th
+    tbody
+      - @today_menu.courses.each do |c|
+        tr
+          td
+            i = c.category.name
+          td = c.name
+          td
+            input.corse_check_box*{type: "checkbox", price: c.price, name: "order[course_ids][]", value: "#{c.id}", checked: courses_include_to_order(@order, c)}
+          td = c.price
+
+      tr
+        td[colspan=3]= "#{t('front.orders.sum')}: "
+        td
+          span.sum = @order.sum
+
+  = f.input :not_order, as: :boolean
+  = f.input :user_id, as: :hidden, input_html: {value: current_user.id}
+  = f.input :date_order, as: :hidden, input_html: {value: Date.today}
+  = f.input :sum, as: :hidden, input_html: {value: @order.sum}
+  = f.submit t("save"), class: "btn"

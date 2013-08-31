@@ -1,5 +1,11 @@
 # -*- encoding : utf-8 -*-
 class Order < ActiveRecord::Base
+  has_and_belongs_to_many :courses, :join_table => 'order_courses'
+  belongs_to :user
+
+  accepts_nested_attributes_for :courses
+
+
 end
 # == Schema Information
 #

@@ -2,6 +2,8 @@
 class Course < ActiveRecord::Base
   belongs_to :category, class_name: "CourseCategory"
   has_and_belongs_to_many  :menus
+  has_and_belongs_to_many  :orders
+
 
   validates :name, :category_id, :price, presence: true
 
