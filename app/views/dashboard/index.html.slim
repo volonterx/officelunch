@@ -2,6 +2,9 @@
   p
     h3 #{'Сегодня ' + date_with_weekday(@date) }
   p
+    =' "С обедом определились #{number_users_to_order_lunch} из #{User.count} пользователей"
+    = link_to t('front.dashboard.order_lunch'), completion_order_dashboard_index_path, class: 'btn btn-success'
+  p
     - if @today_menu
       h4 На обед:
       = render partial: "order"

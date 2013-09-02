@@ -4,6 +4,7 @@ ru:
   cancel: "Отменить"
   delete: "Удалить"
   realy_destroy?: "Дуйствительно удалить?"
+  count: "Количество"
   devise:
     emails: "E-mail"
     sessions:
@@ -51,6 +52,11 @@ ru:
       success_create: "Заказ успешно создан"
       success_update: "Заказ успешно обновлен"
       you_ordered: "Вы заказали"
+      order_lunch: "Заказать обед"
+      order: "Заказ"
+      not_order: "Не заказывает обед"
+      finish_order: "Конечный заказ"
+      courses_name: "Блюдо"
   mailer:
     send_menu:
       date_init: "Рассылка меню на"

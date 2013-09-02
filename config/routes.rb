@@ -3,7 +3,9 @@ Officelunch::Application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => "devise_custom/registrations" }
 
-  resources :dashboard, only: :index
+  resources :dashboard, only: :index do
+    get :completion_order, on: :collection
+  end
   resources :course_categories
   resources :courses
   resources :menus do

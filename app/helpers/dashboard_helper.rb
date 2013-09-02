@@ -16,4 +16,8 @@ module DashboardHelper
     order.courses.include?(c)
   end
 
+  def number_users_to_order_lunch
+    Order.where(date_order: Date.today).count
+  end
+
 end

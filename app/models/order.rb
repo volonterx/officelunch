@@ -5,7 +5,6 @@ class Order < ActiveRecord::Base
 
   accepts_nested_attributes_for :courses
 
-
 end
 # == Schema Information
 #

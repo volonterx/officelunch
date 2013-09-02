@@ -1,0 +1,48 @@
+.span6.users_order_span
+  p
+    h3 = t('front.dashboard.order')
+  - @params[:user].each do |name, order|
+    div*{class: ("user_order_name" if @params[:user].keys.first != name)}
+      span = name
+      = link_to t('edit'), edit_order_path(order), class: "btn btn-success"
+      - if order.not_order
+        = t('front.dashboard.not_order')
+      - else
+        table class='table table-stripped table-condensed'
+            thead
+              tr
+                th
+                th
+                th
+            tbody
+              - order.courses.each do |c|
+                tr
+                  td
+                    i = c.category.name
+                  td = c.name
+                  td = c.price
+
+              tr
+                td[colspan=2]= "#{t('front.orders.sum')}: "
+                td
+                  span.sum = order.sum
+
+.span5
+  p
+    h3 = t('front.dashboard.finish_order')
+    table class='table table-stripped table-condensed'
+      thead
+        tr
+          th = t('front.dashboard.courses_name')
+          th = t('count')
+          th = t('front.orders.sum')
+      tbody
+        - @params[:need_order].each do |name, count|
+          tr
+            td = name
+            td = count
+            td = @params[:total_courses_sum][name]
+        tr
+          td[colspan=2]= "#{t('front.orders.sum')}: "
+          td
+            span.sum = @params[:total_sum]
