@@ -10,6 +10,7 @@ $ ->
 
   $(document).on 'click', '.corse_check_box', ->
     change_sum()
+    $('#order_not_order').attr('checked', false)
 
   $(document).on 'click', '#order_not_order', ->
     if $('#order_not_order:checked').length > 0

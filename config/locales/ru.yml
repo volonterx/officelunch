@@ -5,6 +5,7 @@ ru:
   delete: "Удалить"
   realy_destroy?: "Дуйствительно удалить?"
   count: "Количество"
+  back: "Назад"
   devise:
     emails: "E-mail"
     sessions:
@@ -57,6 +58,9 @@ ru:
       not_order: "Не заказывает обед"
       finish_order: "Конечный заказ"
       courses_name: "Блюдо"
+      order_close: "Обед заказан"
+      you_order: "Вы заказали"
+      dinner_menu: "На обед"
   mailer:
     send_menu:
       date_init: "Рассылка меню на"

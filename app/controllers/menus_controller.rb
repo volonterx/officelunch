@@ -3,7 +3,7 @@ class MenusController < ApplicationController
   before_filter :get_menu, only: [:show, :edit, :update, :destroy]
 
   def index
-    @menus = Menu.order(:date_init)
+    @menus = Menu.order('date_init DESC')
   end
 
   def show

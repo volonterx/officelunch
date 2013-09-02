@@ -3,6 +3,8 @@ class Order < ActiveRecord::Base
   has_and_belongs_to_many :courses, :join_table => 'order_courses'
   belongs_to :user
 
+  scope :today, -> {where('orders.date_order = ?', Date.today)}
+
   accepts_nested_attributes_for :courses
 
 end
