@@ -44,8 +44,8 @@ class MenusController < ApplicationController
   end
 
   def send_email_about_dinner
-    email_digest = DeliverEmailsAboutDinnerService.new(params[:id])
-    email_digest.delay.send_email_and_update_menu_status
+    email_digest = DeliverNotificationAboutDinnerService.new(params[:id])
+    email_digest.send_email_and_create_google_event
     redirect_to menus_path, notice: I18n.t('front.menus.digest_was_launched')
   end
 

@@ -15,8 +15,8 @@ table class='table table-stripped table-condensed'
       tr
         td = link_to m.date_init, menu_path(m), title: "Просмотреть"
         td = m.sent? ? '✓' : ''
-        td = link_to t('front.menus.send_emails'), send_email_about_dinner_menu_path(m), class: "btn btn-primary", title: t('front.menus.send_emails_title'), confirm: t('front.menus.realy_send?'), method: "post"
+        td = link_to t('front.menus.send_emails'), send_email_about_dinner_menu_path(m), class: "btn btn-primary", title: t('front.menus.send_emails_title'), data: {confirm: t('front.menus.realy_send?')}, method: "post"
         td
           = link_to 'Редактировать', edit_menu_path(m), class: 'btn', title: 'Редактировать'
           | &nbsp;&nbsp;
-          = link_to 'Удалить', menu_path(m), class: 'btn btn-danger', method: 'delete', title: 'Удалить', confirm: 'Действительно удалить?', "data-no-turbolink" => true
+          = link_to 'Удалить', menu_path(m), class: 'btn btn-danger', method: 'delete', title: 'Удалить', data: {confirm: 'Действительно удалить?'}, "data-no-turbolink" => true

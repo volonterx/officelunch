@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
   devise :invitable, :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:google_oauth2]
 
   has_many :orders
 
@@ -11,6 +11,23 @@ class User < ActiveRecord::Base
 
   def today_order
     orders.where(date_order: Date.today).try(:first)
+  end
+
+  def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
+    data = access_token.info
+    user = User.where(:email => data["email"]).first
+
+    unless user
+      user = User.create(name: data["name"],
+                         email: data["email"],
+                         password: Devise.friendly_token[0,20]
+      )
+    end
+    user
+  end
+
+  def token_for_refresh_access
+    google_token && refresh_google_token
   end
 
 end
