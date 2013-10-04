@@ -27,6 +27,8 @@ ru:
       user:
         updated: "Данные сохранены"
         send_instructions: "Инвайт был отправлен"
+  back_end:
+    please_ordered_dinner: "Пожалуйста, закажите обед!"
   front:
     header:
       user_block:

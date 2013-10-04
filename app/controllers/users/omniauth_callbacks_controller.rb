@@ -5,15 +5,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @user.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Google"
       @auth = request.env["omniauth.auth"]
-      @token = @auth["credentials"]["token"]
-      client = Google::APIClient.new
-      client.authorization.access_token = @token
-      service = client.discovered_api('calendar', 'v3')
-      @result = client.execute(
-          :api_method => service.calendar_list.list,
-          :parameters => {},
-          :headers => {'Content-Type' => 'application/json'})
-      puts @result.data.inspect
+      if @auth["credentials"]["refresh_token"]
+        @user.update_attribute(:refresh_google_token, @auth["credentials"]["refresh_token"])
+      end
+      @user.update_attribute(:google_token, @auth["credentials"]["token"])
       sign_in_and_redirect @user, :event => :authentication
     else
       #session["devise.google_data"] = request.env["omniauth.auth"]

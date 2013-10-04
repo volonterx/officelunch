@@ -26,6 +26,10 @@ class User < ActiveRecord::Base
     user
   end
 
+  def token_for_refresh_access
+    google_token && refresh_google_token
+  end
+
 end
 # == Schema Information
 #

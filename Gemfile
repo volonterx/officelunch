@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'inherited_resources'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
+gem 'rest-client', require: false
 
 gem 'russian'
 gem 'slim'
@@ -22,7 +23,6 @@ gem 'devise_invitable', :github => 'scambra/devise_invitable'
 gem 'devise-russian'
 gem 'google-api-client', :require => 'google/api_client'
 gem 'omniauth-google-oauth2', :git => 'https://github.com/zquestz/omniauth-google-oauth2.git'
-
 
 
 group :development do
