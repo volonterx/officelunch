@@ -6,8 +6,7 @@ class CompletionOrderService
     self.orders = Order.today
   end
 
-  def get_order_params_and_closed_user_orders
-    update_order_status
+  def get_order_params
     {
       user: get_user_orders_data,
       total_courses_sum: get_courses_sum,
@@ -15,6 +14,8 @@ class CompletionOrderService
       total_sum: orders.sum(:sum)
     }
   end
+  
+  protected
 
   def get_user_orders_data
     params = {}
@@ -30,10 +31,6 @@ class CompletionOrderService
 
   def get_courses_count
     orders.joins(:courses).joins(:courses).group("courses.name").count
-  end
-
-  def update_order_status
-    orders.update_all(closed: true) if orders.count == User.count && !orders.first.closed
   end
 
 end

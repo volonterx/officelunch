@@ -12,7 +12,12 @@ class DashboardController < ApplicationController
 
   def completion_order
     new_order_service = CompletionOrderService.new
-    @params = new_order_service.get_order_params_and_closed_user_orders
+    @params = new_order_service.get_order_params
+  end
+
+  def closed_orders
+    Order.today.update_all(closed: true)
+    redirect_to dashboard_index_path, notice: I18n.t('front.dashboard.order_close')
   end
 
 end

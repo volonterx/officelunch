@@ -7,6 +7,11 @@ class Order < ActiveRecord::Base
 
   accepts_nested_attributes_for :courses
 
+
+  def self.all_user_ordered_dinner?
+    today.count == User.count
+  end
+
 end
 # == Schema Information
 #

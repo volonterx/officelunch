@@ -73,3 +73,4 @@ form.new_user input.password, form.edit_user input.password{
   font-weight: 800
 }
 
+td.price{width: 100px;}

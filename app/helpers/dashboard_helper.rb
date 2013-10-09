@@ -20,4 +20,15 @@ module DashboardHelper
     Order.where(date_order: Date.today).count
   end
 
+  def dashboard_order_header(order, controller)
+    if order.closed && order.not_order
+      t("front.dashboard.you_not_order")
+    else
+      t("front.dashboard.#{@order.closed ? 'you_order' : 'dinner_menu'}")
+    end
+  end
+  
+  def today_orders_already_closed
+    Order.today.first.closed
+  end
 end

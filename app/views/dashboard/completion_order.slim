@@ -4,7 +4,8 @@
   - @params[:user].each do |name, order|
     div*{class: ("user_order_name" if @params[:user].keys.first != name)}
       span = name
-      = link_to t('edit'), edit_order_path(order), class: "btn btn-success"
+      - unless order.closed
+        = link_to t('edit'), edit_order_path(order), class: "btn btn-success"
       - if order.not_order
         br
         h3= t('front.dashboard.not_order')
@@ -49,6 +50,8 @@
             span.sum = @params[:total_sum]
 
     h4 Кристина (050)226-90-44
+    - unless today_orders_already_closed 
+      = link_to t('front.dashboard.order_close'), closed_orders_dashboard_index_path, method: :put, class: "btn btn-primary"
 
 
 = link_to t('back'), dashboard_index_path, class: 'btn'

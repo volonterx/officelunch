@@ -7,13 +7,13 @@ class OrdersController < InheritedResources::Base
 
   def create
     create! do |success, failure|
-      success.html {redirect_to completion_order_dashboard_index_path, notice: t('front.dashboard.success_create')}
+      success.html {redirect_to dashboard_index_path, notice: t('front.dashboard.success_create')}
     end
   end
 
   def update
     update! do |success, failure|
-      success.html {redirect_to completion_order_dashboard_index_path, notice: t('front.dashboard.success_update')}
+      success.html {redirect_to dashboard_index_path, notice: t('front.dashboard.success_update')}
     end
   end
 

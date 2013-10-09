@@ -5,6 +5,7 @@ Officelunch::Application.routes.draw do
 
   resources :dashboard, only: :index do
     get :completion_order, on: :collection
+    put :closed_orders, on: :collection
   end
   resources :course_categories
   resources :courses

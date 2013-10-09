@@ -8,5 +8,10 @@ h2= t('devise.registrations.edit_profile')
         | Currently waiting confirmation for: #{resource.unconfirmed_email}
     = f.input :password, :autocomplete => "off", :hint => t('devise.registrations.hint_for_password'), :required => false
     = f.input :password_confirmation, :required => false, label: t('devise.registrations.password_confirmation')
+    - if current_user.have_google_email? && !current_user.token_for_refresh_access
+      = link_to t('front.users.connect_to_facebook_calendar'), user_omniauth_authorize_path(:google_oauth2)
+    - elsif current_user.have_google_email? &&  current_user.token_for_refresh_access
+      = t('front.users.related_with_google_calendar')
+
   .form-actions
     = f.button :submit, t('save'), class: "btn btn-success"

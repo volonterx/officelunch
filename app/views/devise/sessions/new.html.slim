@@ -5,4 +5,3 @@ h2= t('devise.sessions.sign_in')
   = f.input :remember_me, label: t('devise.sessions.remember_me'), as: :boolean if devise_mapping.rememberable?
   .form-actions
     = f.button :submit, t('devise.sessions.sign_in'), class: "btn btn-success"
-  = link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)

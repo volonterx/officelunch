@@ -7,9 +7,9 @@
         h3.red_font = t('front.dashboard.order_close')
       - else
         =' "С обедом определились #{number_users_to_order_lunch} из #{User.count} пользователей"
-        = link_to t('front.dashboard.order_lunch'), completion_order_dashboard_index_path, class: 'btn btn-success'
-
-      h4 = t("front.dashboard.#{@order.closed ? 'you_order' : 'dinner_menu'}")
+      - if Order.all_user_ordered_dinner?
+        = link_to t('front.dashboard.to_orders'), completion_order_dashboard_index_path, class: 'btn btn-success'
+      h4 = dashboard_order_header(@order, controller)
       = render partial: "order"
     - else
       = link_to "Создать меню на сегодня", new_menu_path, class: "btn"
