@@ -29,6 +29,6 @@ module DashboardHelper
   end
   
   def today_orders_already_closed
-    Order.today.first.closed
+    Order.today.try(:first).try(:closed)
   end
 end

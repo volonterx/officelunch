@@ -30,6 +30,7 @@ ru:
   back_end:
     please_ordered_dinner: "Пожалуйста, закажите обед!"
   front:
+    not_access_to_page: "В данный момент вы не можете посетить данную страницу"
     header:
       user_block:
         edit_profile: "Редактировать данные"

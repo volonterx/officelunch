@@ -11,6 +11,9 @@ class DashboardController < ApplicationController
   end
 
   def completion_order
+    if Order.today.empty?
+      redirect_to dashboard_index_path, notice: I18n.t('front.not_access_to_page')
+    end
     new_order_service = CompletionOrderService.new
     @params = new_order_service.get_order_params
   end
